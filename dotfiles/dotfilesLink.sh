@@ -6,7 +6,7 @@ ln -sf ~/dotfiles/.inputrc ~/.inputrc
 ln -sf ~/dotfiles/.profile ~/.profile
 ln -sf ~/dotfiles/.eaglerc ~/.eaglerc
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
-ln -sF ~/dotfiles/.git ~/.git
-ln -sF ~/dotfiles/.macports ~/.macports
-ln -sF ~/dotfiles/.emacs.d ~/.emacs.d
-ln -sF ~/dotfiles/.vim ~/.vim
+# ln -sF ~/dotfiles/.git ~/.git
+# ln -sF ~/dotfiles/.macports ~/.macports
+# ln -sF ~/dotfiles/.emacs.d ~/.emacs.d
+# ln -sF ~/dotfiles/.vim ~/.vim
