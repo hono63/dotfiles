@@ -1,0 +1,2 @@
+#ターミナルで大文字小文字を区別しないで入力補完 20140127
+set completion-ignore-case On
