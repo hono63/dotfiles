@@ -1,0 +1,60 @@
+scriptencoding utf-8
+"
+" vimrc for chromebook
+" Last Change: 01-Apr-2018.
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set autoindent
+set backspace=indent,eol,start
+set wrapscan
+set showmatch
+set wildmenu
+set formatoptions+=mM
+set clipboard=unnamedplus,unnamed
+set scrolloff=3
+
+set number
+set ruler
+set nolist
+"set listchars=tab:>-,extends:<,trail:-,eol:<
+set nowrap
+set laststatus=2
+set cmdheight=2
+set showcmd
+set title
+"colorscheme evening 
+set showtabline=2
+
+
+
+set nobackup
+set undodir=$VIM/undo
+"set swapfile
+set directory=$VIM/swap
+"au BufEnter * execute 'lcd ' expand('%:p:h')
+set fileencodings=utf-8,cp932,euc-jp
+set fileformats=unix,dos
+"let g:browsefilter = "whatever"
+
+inoremap <c-j> <esc>
+vnoremap <c-j> <esc>
+nnoremap <c-j> <c-e>j
+nnoremap <c-k> <c-y>k
+nnoremap <c-h> zhh
+nnoremap <c-l> zll
+nnoremap <s-d> dd
+nnoremap gr gT
+nnoremap <Tab> gt
+nnoremap <s-Tab> gT
+"nnoremap p P
+"nnoremap P p
+nnoremap cp vep
+nnoremap :t :tabnew
+nnoremap :bt :browse tabnew
+nnoremap gf <c-w>gf
+nnoremap <c-u> kkkkkkkkkkkkkkkkkkkk
+nnoremap <c-d> jjjjjjjjjjjjjjjjjjjj
+"nnoremap <c-u> <c-y><c-y><c-y><c-y><c-y><c-y><c-y><c-y><c-y><c-y><c-y><c-y><c-y><c-y><c-y><c-y><c-y><c-y><c-y><c-y>20k
+"nnoremap <c-d> <c-e><c-e><c-e><c-e><c-e><c-e><c-e><c-e><c-e><c-e><c-e><c-e><c-e><c-e><c-e><c-e><c-e><c-e><c-e><c-e>20j
