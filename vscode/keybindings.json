@@ -1,18 +1,51 @@
-// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+// Place your key bindings in this file to override the defaults
 [
     {
+        "key": "ctrl+w ctrl+w",
+        "command": "workbench.action.togglePanel"
+    },
+    {
         "key": "ctrl+j",
-        "command": "extension.vim_escape",
-        "when": "editorTextFocus && vim.active && vim.mode == 'Insert' && !inDebugRepl"
+        "command": "-workbench.action.togglePanel"
     },
+    // Terminal focus switch
+    { 
+        "key": "ctrl+shift+enter"
+        , "command": "workbench.action.terminal.focus" 
+    },
+    { 
+        "key": "ctrl+shift+enter",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when":"terminalFocus" 
+    },
+    // できたー
     {
-        "key": "Tab",
+        "key": "ctrl+j",
+		"command": "extension.vim_escape",
+		"when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
+    {   
+        "key": "tab",                   
         "command": "workbench.action.nextEditor",
-        "when": "editorTextFocus && vim.active && vim.mode != 'Insert' && !inDebugRepl"
+		"when": "editorTextFocus && vim.active && vim.mode != 'Insert' && !inDebugRepl"
+    },
+    { 
+        "key": "shift+tab",             
+        "command": "workbench.action.previousEditor",
+		"when": "editorTextFocus && vim.active && vim.mode != 'Insert' && !inDebugRepl"
     },
     {
-        "key": "shift+Tab",
-        "command": "workbench.action.previousEditor",
-        "when": "editorTextFocus && vim.active && vim.mode != 'Insert' && !inDebugRepl"
+        "key": "ctrl+shift+r",
+        "command": "-workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
+        "when": "inQuickOpen && inRecentFilesPicker"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "-editor.action.refactor",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "workbench.action.tasks.restartTask"
     },
 ]
