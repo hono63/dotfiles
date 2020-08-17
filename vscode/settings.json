@@ -1,38 +1,143 @@
 {
-    "workbench.colorTheme": "Default High Contrast",
+    // General setting
+    //"workbench.colorTheme": "Default High Contrast",
+    //"workbench.editor.enablePreview": false,
+    "editor.minimap.enabled": false,
+    "editor.tabCompletion": "on",
+    //"editor.wordWrap": "on",
 
-    "vim.hlsearch": true,
-    "vim.searchHighlightColor":"rgba(255, 255, 150, 0.3)",
+    //"terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\cmd.exe",
+    //"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+
+    // Vimの設定
     "vim.useSystemClipboard": true,
+    "vim.searchHighlightColor": "rgba(255, 255, 155, 0.3)",
+    //"vim.cmdLineInitialColon": true,
+    "vim.visualstar": true,
+    "vim.hlsearch": true,
 
-    /*"vim.insertModeKeyBindingsNonRecursive": [
-        {
-            //"before": 
-        }
-    ],*/
-
-    "vim.otherModesKeyBindingsNonRecursive": [
+   "vim.handleKeys": {
+        //"<C-j>": false,
+        "<C-@>": false,
+    },
+    "vim.insertModeKeyBindings": [
         {
             "before": ["<C-j>"],
-            "after": ["<C-e>", "j"]
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["<C-@>"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["<C-l>"],
+            "commands": ["cursorRight"]
+        },
+        {
+            "before": ["<C-h>"],
+            "commands": ["cursorLeft"]
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<C-o>"],
+            "commands": ["workbench.action.navigateBack"]
+        },
+        {
+            "before": ["<C-a>"],
+            "commands": ["workbench.action.navigateForward"]
+        },
+        {
+            "before": ["<C-a>"],
+            "after": ["g","g","V","G"]
+        },
+        {
+            "before": ["<C-j>"],
+            "after": ["<C-e>","j"]
         },
         {
             "before": ["<C-k>"],
-            "after": ["<C-y>", "k"]
+            "after": ["<C-y>","k"]
+        },
+        {
+            "before": ["<C-l>"],
+            "commands": ["cursorRight"]
+        },
+        {
+            "before": ["<C-h>"],
+            "commands": ["cursorLeft"]
         },
         {
             "before": ["D"],
             "after": ["d", "d"]
         },
         {
+            "before": ["<Tab>"],
+            "after": ["g", "t"]
+        },
+        {
+            "before": ["<S-Tab>"],
+            "after": ["g", "T"]
+        },
+        {
+            "before": ["c", "p"],
+            "after": ["v", "e", "p"]
+        },
+        {
+            "before": [":","t"],
+            "after": [":tabnew"]
+        },
+        {
+            "before": ["g","f"],
+            "after": ["<C-w>","g","f"]
+        },
+        {
             "before": ["<C-u>"],
-            "after": ["1", "0", "k"]
+            "after": ["1","6","k"]
         },
         {
             "before": ["<C-d>"],
-            "after": ["1", "0", "j"]
+            "after": ["1","6","j"]
+        },
+        {
+            "before": ["K"],
+            "commands": [
+                "workbench.action.keepEditor"
+            ]
         },
     ],
 
-    "editor.minimap.enabled": false,
+    "git.enableSmartCommit": true,
+    "window.zoomLevel": 0,
+
+    // gitLensの設定 
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.defaultDateStyle": "absolute",
+    "gitlens.keymap": "none",
+    "[cpp]": {},
+    "gitlens.codeLens.enabled": false,
+    "gitlens.mode.active": "zen",
+    "files.encoding": "shiftjis",
+    "C_Cpp.updateChannel": "Insiders",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[python]": {
+        "files.encoding": "utf8"
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+    // java settings
+    "java.home": "C:/Program Files/Java/jdk1.8.0_211",
+    "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -Dfile.enconding=utf8",
+    "java.debug.settings.enableRunDebugCodeLens": true,
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "explorer.confirmDragAndDrop": false,
+    "python.jediEnabled": false,
+    "terminal.integrated.inheritEnv": false,
+    "python.languageServer": "Microsoft",
+    "workbench.startupEditor": "welcomePage",
 }
